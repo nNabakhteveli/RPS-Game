@@ -1,0 +1,16 @@
+html {
+    background-image: url('https://wallpaperaccess.com/full/869.jpg');
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 350px;
+}
+
+
+#rock, #paper, #scissors {
+    padding: 13px;
+    margin: 10px;
+    font-size: 1.3rem;
+}
