@@ -13,7 +13,7 @@ const changingValue = () => {
             randomSign.innerHTML = '<i class="far fa-hand-rock"><br>Rock</i>';
             return 0;
             break;
-    
+
         case 1:
             randomSign.innerHTML = '<i class="far fa-hand-paper"><br>Paper</i>';
             return 1;
@@ -26,12 +26,35 @@ const changingValue = () => {
     }
 }  
 
+changingValue();
 
 let playerPoint = 0;
 let botPoint = 0;
 
+function renderPoints(){
+    document.getElementById('player').innerHTML = `Player: ${playerPoint}`;
+    document.getElementById('bot').innerHTML = `Bot: ${botPoint}`;
+    playerPoint = Math.min(0);
+    botPoint = Math.min(0);
+}
+
+// Defining minimum values for player and bot's points
+function minPointValues(){
+    let minimum = 0;
+    if(playerPoint < minimum){
+        playerPoint = minimum;
+    }
+
+    if(botPoint < minimum){
+        botPoint = minimum;
+    }
+}
+
+
 // Options for rock
 rock.addEventListener('click', () => {
+    renderPoints();
+    randomSign.style.visibility = 'visible';
     switch(changingValue()){
         case 0:
             console.log('TIE');
@@ -47,10 +70,13 @@ rock.addEventListener('click', () => {
             botPoint--;
             break;
     }
+    minPointValues();
 });
 
 // Options for paper
 paper.addEventListener('click', () => {
+    renderPoints();
+    randomSign.style.visibility = 'visible';
     switch(changingValue()){
         case 0:
             console.log('YOU WIN!');
@@ -66,11 +92,14 @@ paper.addEventListener('click', () => {
             botPoint++;
             break;
     }
+    minPointValues();
 });
 
 
 // Options for scissors
 scissors.addEventListener('click', () => {
+    renderPoints();
+    randomSign.style.visibility = 'visible';
     switch(changingValue()){
         case 0:
             console.log('YOU LOOSE :(');
@@ -86,4 +115,5 @@ scissors.addEventListener('click', () => {
             console.log('TIE');
             break;
     }
+    minPointValues();
 });

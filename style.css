@@ -2,6 +2,29 @@ html {
   background-image: url("https://wallpaperaccess.com/full/869.jpg");
 }
 
+body {
+  -webkit-animation: transitionIn 1s;
+          animation: transitionIn 1s;
+}
+
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,8 +43,20 @@ html {
 
 #random {
   position: fixed;
-  margin-top: -170px;
+  margin-top: 170px;
   margin-left: 575px;
   font-size: 1.5rem;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.scores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#player {
+  margin-right: 80%;
 }
 /*# sourceMappingURL=style.css.map */
