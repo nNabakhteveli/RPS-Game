@@ -10,16 +10,18 @@ body {
     from{
       opacity: 0;
     }
-    
+
     to{
       opacity: 1;
     }
 }
 
-.buttons {
+#buttons {
     display: flex;
     justify-content: center;
     margin-top: 350px;
+    visibility: hidden;
+    transition: 0.5s;
 }
 
 
@@ -27,6 +29,7 @@ body {
     padding: 13px;
     margin: 10px;
     font-size: 1.3rem;
+    cursor: pointer;
 }
 
 #random {
@@ -36,6 +39,7 @@ body {
     font-size: 1.5rem;
     visibility: hidden;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .scores {
@@ -50,6 +54,7 @@ body {
     margin-left: 565px;
     margin-top: 30px;
     font-size: 1.3rem;
+    cursor: pointer;
 }
 
 #startGameText {
@@ -57,4 +62,13 @@ body {
     font-size: 2rem;
     margin-top: -500px;
     margin-left: 500px;
+}
+
+#textOnTop {
+    position: fixed;
+    top: 115px;
+    left: 560px;
+    text-align: center;
+    font-size: 2rem;
+    opacity: 0.9;
 }

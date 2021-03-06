@@ -8,12 +8,12 @@ let execute = true;
 function startGameText(){
     if (execute){
         let text = document.createElement('p');
-        // text.className = 'startGameText';
         text.setAttribute('id', 'startGameText');
         text.innerHTML = 'Choose your move!';
         document.body.appendChild(text);
         execute = false;
     }
+    document.getElementById('buttons').style.visibility = 'visible';
 }
 
 
@@ -70,72 +70,70 @@ function removeText(){
     startGameText.remove();
 }
 
+let textOnTop = document.getElementById('textOnTop');
+
 // Options for rock
 rock.addEventListener('click', () => {
-    renderPoints();
-    removeText();
-    randomSign.style.visibility = 'visible';
     switch(changingValue()){
         case 0:
-            console.log('TIE');
+            textOnTop.innerHTML = 'TIE';
             break;
         case 1:
-            console.log('OH SNAP, YOU LOOSE :(');
-            playerPoint--;
+            textOnTop.innerHTML = 'OH SNAP :(';
             botPoint++;
+            playerPoint = playerPoint;
             break;
         case 2:
-            console.log('YOU WIN!');
+            textOnTop.innerHTML = 'YOU WIN!';
             playerPoint++;
-            botPoint--;
+            botPoint = botPoint;
             break;
     }
+    randomSign.style.visibility = 'visible';
     minPointValues();
+    renderPoints();
 });
 
 // Options for paper
 paper.addEventListener('click', () => {
-    renderPoints();
-    removeText();
-    randomSign.style.visibility = 'visible';
     switch(changingValue()){
         case 0:
-            console.log('YOU WIN!');
+            textOnTop.innerHTML = 'YOU WIN!';
             playerPoint++;
-            botPoint--;
+            botPoint = botPoint;
             break;
         case 1:
-            console.log('TIE');
+            textOnTop.innerHTML = 'TIE';
             break;
         case 2:
-            console.log('YOU LOOSE :(');
-            playerPoint--;
+            textOnTop.innerHTML = 'OH SNAP :(';
             botPoint++;
+            playerPoint = playerPoint;
             break;
     }
+    randomSign.style.visibility = 'visible';
     minPointValues();
+    renderPoints();
 });
-
 
 // Options for scissors
 scissors.addEventListener('click', () => {
-    renderPoints();
-    removeText();
-    randomSign.style.visibility = 'visible';
     switch(changingValue()){
         case 0:
-            console.log('YOU LOOSE :(');
-            playerPoint--;
+            textOnTop.innerHTML = 'OH SNAP :(';
             botPoint++;
+            playerPoint = playerPoint;
             break;
         case 1:
-            console.log('YOU WIN!');
+            textOnTop.innerHTML = 'YOU WIN!';
             playerPoint++;
-            botPoint--;
+            botPoint = botPoint;
             break;
         case 2:
-            console.log('TIE');
+            textOnTop.innerHTML = 'TIE';
             break;
     }
+    randomSign.style.visibility = 'visible';
     minPointValues();
+    renderPoints();
 });
