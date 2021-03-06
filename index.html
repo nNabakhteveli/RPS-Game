@@ -3,22 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Rock-Paper-Scissors Game</title>
   </head>
-
   <body>
+      <button id='random'>Some value</button>
+
     <div class="scores">
         <h2 id='player'></h2>
         <h2 id='bot'></h2>
     </div>
 
-      <div class="buttons" id='buttons'>
-        <button id='random'></button>
-        <button id="rock" onclick="changingValue()">rock</button>
-        <button id="paper" onclick="changingValue()">paper</button>
-        <button id="scissors" onclick="changingValue()">scissors</button>
+    <div class="buttons" id='buttons'>
+       <button id="rock" onclick="changingValue()"><i class="far fa-hand-rock"><br>rock</i></button>
+        <button id="paper" onclick="changingValue()"><i class="far fa-hand-paper"><br>paper</i></button>
+        <button id="scissors" onclick="changingValue()"><i class="far fa-hand-scissors"><br>scissors</i></button>
     </div>
+
   </body>
   <script src="./script.js"></script>
 </html>

@@ -10,17 +10,17 @@ const changingValue = () => {
 
     switch(randomNum){
         case 0:
-            randomSign.innerHTML = "rock";
+            randomSign.innerHTML = '<i class="far fa-hand-rock"><br>Rock</i>';
             return 0;
             break;
     
         case 1:
-            randomSign.innerHTML = 'paper';
+            randomSign.innerHTML = '<i class="far fa-hand-paper"><br>Paper</i>';
             return 1;
             break;
 
         case 2: 
-            randomSign.innerHTML = 'scissors';
+            randomSign.innerHTML = '<i class="far fa-hand-scissors"><br>Scissors</i>';
             return 2;
             break;
     }
@@ -37,7 +37,7 @@ rock.addEventListener('click', () => {
             console.log('TIE');
             break;
         case 1:
-            console.log('YOU LOOSE :(');
+            console.log('OH SNAP, YOU LOOSE :(');
             playerPoint--;
             botPoint++;
             break;
