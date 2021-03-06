@@ -43,7 +43,7 @@ body {
 
 #random {
   position: fixed;
-  margin-top: 170px;
+  margin-top: 210px;
   margin-left: 575px;
   font-size: 1.5rem;
   visibility: hidden;
@@ -58,5 +58,18 @@ body {
 
 #player {
   margin-right: 80%;
+}
+
+#start-game {
+  margin-left: 565px;
+  margin-top: 30px;
+  font-size: 1.3rem;
+}
+
+#startGameText {
+  color: white;
+  font-size: 2rem;
+  margin-top: -500px;
+  margin-left: 500px;
 }
 /*# sourceMappingURL=style.css.map */

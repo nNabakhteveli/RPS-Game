@@ -3,6 +3,20 @@ let paper = document.getElementById('paper');
 let scissors = document.getElementById('scissors');
 
 
+// To call function and show up text only once
+let execute = true;
+function startGameText(){
+    if (execute){
+        let text = document.createElement('p');
+        // text.className = 'startGameText';
+        text.setAttribute('id', 'startGameText');
+        text.innerHTML = 'Choose your move!';
+        document.body.appendChild(text);
+        execute = false;
+    }
+}
+
+
 let randomNum;
 let randomSign = document.getElementById('random');
 const changingValue = () => {
@@ -26,7 +40,6 @@ const changingValue = () => {
     }
 }  
 
-changingValue();
 
 let playerPoint = 0;
 let botPoint = 0;
@@ -37,6 +50,7 @@ function renderPoints(){
     playerPoint = Math.min(0);
     botPoint = Math.min(0);
 }
+
 
 // Defining minimum values for player and bot's points
 function minPointValues(){
@@ -50,10 +64,16 @@ function minPointValues(){
     }
 }
 
+// Removing welcome text after click on button
+function removeText(){
+    let startGameText = document.getElementById('startGameText');
+    startGameText.remove();
+}
 
 // Options for rock
 rock.addEventListener('click', () => {
     renderPoints();
+    removeText();
     randomSign.style.visibility = 'visible';
     switch(changingValue()){
         case 0:
@@ -76,6 +96,7 @@ rock.addEventListener('click', () => {
 // Options for paper
 paper.addEventListener('click', () => {
     renderPoints();
+    removeText();
     randomSign.style.visibility = 'visible';
     switch(changingValue()){
         case 0:
@@ -99,6 +120,7 @@ paper.addEventListener('click', () => {
 // Options for scissors
 scissors.addEventListener('click', () => {
     renderPoints();
+    removeText();
     randomSign.style.visibility = 'visible';
     switch(changingValue()){
         case 0:
