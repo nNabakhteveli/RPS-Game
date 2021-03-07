@@ -21,15 +21,23 @@ body {
     justify-content: center;
     margin-top: 350px;
     visibility: hidden;
-    transition: 0.5s;
 }
 
+$buttonBackgroundColor: #1F232A;
+$buttonTextColor: #60DAFB;
 
 #rock, #paper, #scissors {
-    padding: 13px;
+    padding: 15px;
     margin: 10px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     cursor: pointer;
+    background: $buttonBackgroundColor;
+    color: $buttonTextColor;
+    border: #ffffff;
+    border-radius: 3px;
+    transition: 0.7s;
+    width: 10%;
+    height: 5%;
 }
 
 #random {
@@ -37,9 +45,16 @@ body {
     margin-top: 210px;
     margin-left: 575px;
     font-size: 1.5rem;
+    padding: 13px;
     visibility: hidden;
     overflow: hidden;
     pointer-events: none;
+    background: $buttonBackgroundColor;
+    color: $buttonTextColor;
+    border: #ffffff;
+    border-radius: 3px;
+    width: 10%;
+    height: 13%;
 }
 
 .scores {
@@ -51,10 +66,15 @@ body {
 }
 
 #start-game {
-    margin-left: 565px;
+    margin-left: 545px;
     margin-top: 30px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    padding: 13px;
     cursor: pointer;
+    background: $buttonBackgroundColor;
+    color: $buttonTextColor;
+    border: #ffffff;
+    border-radius: 2px;
 }
 
 #startGameText {
@@ -67,7 +87,7 @@ body {
 #textOnTop {
     position: fixed;
     top: 115px;
-    left: 560px;
+    left: 570px;
     text-align: center;
     font-size: 2rem;
     opacity: 0.9;

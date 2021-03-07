@@ -27,12 +27,10 @@ const changingValue = () => {
             randomSign.innerHTML = '<i class="far fa-hand-rock"><br>Rock</i>';
             return 0;
             break;
-
         case 1:
             randomSign.innerHTML = '<i class="far fa-hand-paper"><br>Paper</i>';
             return 1;
             break;
-
         case 2: 
             randomSign.innerHTML = '<i class="far fa-hand-scissors"><br>Scissors</i>';
             return 2;
@@ -47,8 +45,6 @@ let botPoint = 0;
 function renderPoints(){
     document.getElementById('player').innerHTML = `Player: ${playerPoint}`;
     document.getElementById('bot').innerHTML = `Bot: ${botPoint}`;
-    playerPoint = Math.min(0);
-    botPoint = Math.min(0);
 }
 
 
@@ -64,11 +60,6 @@ function minPointValues(){
     }
 }
 
-// Removing welcome text after click on button
-function removeText(){
-    let startGameText = document.getElementById('startGameText');
-    startGameText.remove();
-}
 
 let textOnTop = document.getElementById('textOnTop');
 
@@ -76,7 +67,7 @@ let textOnTop = document.getElementById('textOnTop');
 rock.addEventListener('click', () => {
     switch(changingValue()){
         case 0:
-            textOnTop.innerHTML = 'TIE';
+            textOnTop.innerHTML = 'TIE 🤝';
             break;
         case 1:
             textOnTop.innerHTML = 'OH SNAP :(';
@@ -103,7 +94,7 @@ paper.addEventListener('click', () => {
             botPoint = botPoint;
             break;
         case 1:
-            textOnTop.innerHTML = 'TIE';
+            textOnTop.innerHTML = 'TIE 🤝';
             break;
         case 2:
             textOnTop.innerHTML = 'OH SNAP :(';
@@ -130,7 +121,7 @@ scissors.addEventListener('click', () => {
             botPoint = botPoint;
             break;
         case 2:
-            textOnTop.innerHTML = 'TIE';
+            textOnTop.innerHTML = 'TIE 🤝';
             break;
     }
     randomSign.style.visibility = 'visible';
