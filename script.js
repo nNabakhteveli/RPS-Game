@@ -10,7 +10,7 @@ function startGameText(){
     document.getElementById('startAudio').play();
     if (execute){
         let text = document.createElement('p');
-        text.setAttribute('id', 'startGameText');
+        text.setAttribute('id', 'startingGameText');
         text.innerHTML = 'Choose your move!';
         document.body.appendChild(text);
         execute = false;
@@ -67,8 +67,10 @@ function playAudio(){
     document.getElementById('myAudio').play();
 }
 
-let textOnTop = document.getElementById('textOnTop');
+
 const textAfterMove = ['YOU WIN!', "IT'S TIE 🤝", 'OH SNAP :('];
+let textOnTop = document.getElementById('textOnTop');
+
 // Options for rock
 rock.addEventListener('click', () => {
     playAudio();
