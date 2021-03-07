@@ -6,7 +6,7 @@ html {
 body {
     animation: transitionIn 1s;
 }
-  
+
 @keyframes transitionIn{
     from{
       opacity: 0;
@@ -108,6 +108,95 @@ $buttonTextColor: #60DAFB;
     font-size: 2rem;
     opacity: 0.9;
     font-family: 'Poppins', sans-serif;
+}
+
+
+
+@media only screen and (min-width: 300px) {
+    #player {
+        margin-right: 80%;
+    }
+
+    #startingGameText {
+        font-size: 2.3rem;
+        margin-top: -580px;
+        margin-left: 25px;
+    }
+
+    #start-game {
+        margin-left: 10px;
+        margin-top: -50px;
+        font-size: 1.7rem;
+        padding: 20px;
+    }
+
+    #rock, #paper, #scissors {
+        padding: 15px;
+        margin: 10px;
+        margin-top: 140px;
+        font-size: 1.8rem;
+        width: 30%;
+        height: 5%;
+    } 
+
+    #random {
+        margin-top: 350px;
+        margin-left: 120px;
+        font-size: 1.8rem;
+        padding: 13px;
+        width: 30%;
+        height: 12%;
+    }
+
+    #textOnTop {
+        top: 210px;
+        left: 115px;
+        font-size: 2.1rem;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    #player {
+        margin-right: 10%;
+    }
+
+    #startingGameText {
+        font-size: 2.3rem;
+        margin-top: -580px;
+        margin-left: 25px;
+    }
+
+    #start-game {
+        margin-left: 100px;
+        margin-top: -50px;
+        font-size: 1.7rem;
+        padding: 20px;
+    }
+
+    #rock, #paper, #scissors {
+        padding: 15px;
+        margin: 10px;
+        margin-top: 140px;
+        font-size: 1.8rem;
+        width: 30%;
+        height: 5%;
+    } 
+
+    #random {
+        margin-top: 350px;
+        margin-left: 120px;
+        font-size: 1.8rem;
+        padding: 13px;
+        width: 30%;
+        height: 12%;
+    }
+
+    #textOnTop {
+        top: 210px;
+        left: 115px;
+        font-size: 2.1rem;
+    }
 }
 
 
@@ -270,6 +359,49 @@ $buttonTextColor: #60DAFB;
         top: 210px;
         left: 242px;
         font-size: 2.1rem;
+    }
+}
+
+@media only screen and (min-width: 1070px) {
+    #player {
+        margin-right: 80%;
+    }
+
+    #startingGameText {
+        font-size: 2.8rem;
+        margin-top: -830px;
+        margin-left: 340px;
+    }
+
+    #start-game {
+        margin-left: 430px;
+        margin-top: 160px;
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    #rock, #paper, #scissors {
+        padding: 15px;
+        margin: 10px;
+        margin-top: 170px;
+        font-size: 2em;
+        width: 13%;
+        height: 7%;
+    } 
+
+    #random {
+        margin-top: 350px;
+        margin-left: 465px;
+        font-size: 1.5rem;
+        padding: 13px;
+        width: 12%;
+        height: 10%;
+    }
+
+    #textOnTop {
+        top: 210px;
+        left: 460px;
+        font-size: 2rem;
     }
 }
 
