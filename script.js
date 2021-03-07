@@ -6,6 +6,8 @@ let scissors = document.getElementById('scissors');
 // To call function and show up text only once
 let execute = true;
 function startGameText(){
+    document.getElementById('start-game').style.visibility = 'hidden';
+    document.getElementById('startAudio').play();
     if (execute){
         let text = document.createElement('p');
         text.setAttribute('id', 'startGameText');
@@ -60,22 +62,27 @@ function minPointValues(){
     }
 }
 
+// Sound on button click
+function playAudio(){
+    document.getElementById('myAudio').play();
+}
 
 let textOnTop = document.getElementById('textOnTop');
-
+const textAfterMove = ['YOU WIN!', "IT'S TIE 🤝", 'OH SNAP :('];
 // Options for rock
 rock.addEventListener('click', () => {
+    playAudio();
     switch(changingValue()){
         case 0:
-            textOnTop.innerHTML = 'TIE 🤝';
+            textOnTop.innerHTML = textAfterMove[1];
             break;
         case 1:
-            textOnTop.innerHTML = 'OH SNAP :(';
+            textOnTop.innerHTML = textAfterMove[2];
             botPoint++;
             playerPoint = playerPoint;
             break;
         case 2:
-            textOnTop.innerHTML = 'YOU WIN!';
+            textOnTop.innerHTML = textAfterMove[0];
             playerPoint++;
             botPoint = botPoint;
             break;
@@ -87,17 +94,18 @@ rock.addEventListener('click', () => {
 
 // Options for paper
 paper.addEventListener('click', () => {
+    playAudio();
     switch(changingValue()){
         case 0:
-            textOnTop.innerHTML = 'YOU WIN!';
+            textOnTop.innerHTML = textAfterMove[0];
             playerPoint++;
             botPoint = botPoint;
             break;
         case 1:
-            textOnTop.innerHTML = 'TIE 🤝';
+            textOnTop.innerHTML = textAfterMove[1];
             break;
         case 2:
-            textOnTop.innerHTML = 'OH SNAP :(';
+            textOnTop.innerHTML = textAfterMove[2];
             botPoint++;
             playerPoint = playerPoint;
             break;
@@ -109,19 +117,20 @@ paper.addEventListener('click', () => {
 
 // Options for scissors
 scissors.addEventListener('click', () => {
+    playAudio();
     switch(changingValue()){
         case 0:
-            textOnTop.innerHTML = 'OH SNAP :(';
+            textOnTop.innerHTML = textAfterMove[2];
             botPoint++;
             playerPoint = playerPoint;
             break;
         case 1:
-            textOnTop.innerHTML = 'YOU WIN!';
+            textOnTop.innerHTML = textAfterMove[0];
             playerPoint++;
             botPoint = botPoint;
             break;
         case 2:
-            textOnTop.innerHTML = 'TIE 🤝';
+            textOnTop.innerHTML = textAfterMove[1];
             break;
     }
     randomSign.style.visibility = 'visible';

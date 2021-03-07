@@ -1,5 +1,5 @@
 html {
-  background-image: url("https://wallpaperaccess.com/full/869.jpg");
+  background-image: url("./img/background.jpg");
 }
 
 body {
@@ -51,6 +51,13 @@ body {
   height: 5%;
 }
 
+#rock:hover, #paper:hover, #scissors:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #60DAFB;
+  color: #1F232A;
+}
+
 #random {
   position: fixed;
   margin-top: 210px;
@@ -72,6 +79,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #1F232A;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 #player {
@@ -79,7 +88,7 @@ body {
 }
 
 #start-game {
-  margin-left: 545px;
+  margin-left: 550px;
   margin-top: 30px;
   font-size: 1.5rem;
   padding: 13px;
@@ -90,11 +99,19 @@ body {
   border-radius: 2px;
 }
 
+#start-game:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #60DAFB;
+  color: #1F232A;
+}
+
 #startGameText {
-  color: white;
-  font-size: 2rem;
-  margin-top: -500px;
-  margin-left: 500px;
+  color: #1F232A;
+  font-size: 2.5rem;
+  margin-top: -550px;
+  margin-left: 465px;
+  font-family: 'Carter One', cursive;
 }
 
 #textOnTop {
@@ -104,5 +121,6 @@ body {
   text-align: center;
   font-size: 2rem;
   opacity: 0.9;
+  font-family: 'Poppins', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

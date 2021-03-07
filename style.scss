@@ -1,5 +1,5 @@
 html {
-    background-image: url('https://wallpaperaccess.com/full/869.jpg');
+    background-image: url('./img/background.jpg');
 }
 
 body {
@@ -38,7 +38,12 @@ $buttonTextColor: #60DAFB;
     transition: 0.7s;
     width: 10%;
     height: 5%;
-}
+    &:hover {
+        transition: 0.5s;
+        background: $buttonTextColor;
+        color: $buttonBackgroundColor; 
+    }
+} 
 
 #random {
     position: fixed;
@@ -59,6 +64,8 @@ $buttonTextColor: #60DAFB;
 
 .scores {
     display: flex;
+    color: $buttonBackgroundColor;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 #player {
@@ -66,7 +73,7 @@ $buttonTextColor: #60DAFB;
 }
 
 #start-game {
-    margin-left: 545px;
+    margin-left: 550px;
     margin-top: 30px;
     font-size: 1.5rem;
     padding: 13px;
@@ -75,13 +82,19 @@ $buttonTextColor: #60DAFB;
     color: $buttonTextColor;
     border: #ffffff;
     border-radius: 2px;
+    &:hover {
+        transition: 0.5s;
+        background: $buttonTextColor;
+        color: $buttonBackgroundColor; 
+    }
 }
 
 #startGameText {
-    color: white;
-    font-size: 2rem;
-    margin-top: -500px;
-    margin-left: 500px;
+    color: $buttonBackgroundColor;
+    font-size: 2.5rem;
+    margin-top: -550px;
+    margin-left: 465px;
+    font-family: 'Carter One', cursive;
 }
 
 #textOnTop {
@@ -91,4 +104,5 @@ $buttonTextColor: #60DAFB;
     text-align: center;
     font-size: 2rem;
     opacity: 0.9;
+    font-family: 'Poppins', sans-serif;
 }

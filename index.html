@@ -5,26 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Rock-Paper-Scissors Game</title>
   </head>
   <body>
-      <button id='random'>Some value</button>
-      <div>
-          <p id="textOnTop"></p>
+    <div>
+        <button id='random'>Some value</button>
+        <div>
+            <p id="textOnTop"></p>
+        </div>
+
+      <div class="scores">
+          <h2 id='player'>Player: </h2>
+          <h2 id='bot'>Bot: </h2>
       </div>
 
-    <div class="scores">
-        <h2 id='player'>Player: </h2>
-        <h2 id='bot'>Bot: </h2>
+      <div id='buttons'>
+        <button id="rock" onclick="changingValue()"><i class="far fa-hand-rock"><br>Rock</i></button>
+          <button id="paper" onclick="changingValue()"><i class="far fa-hand-paper"><br>Paper</i></button>
+          <button id="scissors" onclick="changingValue()"><i class="far fa-hand-scissors"><br>Scissors</i></button>
+      </div>
+      <button id="start-game" onclick="startGameText()">Start Game!</button>
     </div>
 
-    <div id='buttons'>
-       <button id="rock" onclick="changingValue()"><i class="far fa-hand-rock"><br>rock</i></button>
-        <button id="paper" onclick="changingValue()"><i class="far fa-hand-paper"><br>paper</i></button>
-        <button id="scissors" onclick="changingValue()"><i class="far fa-hand-scissors"><br>scissors</i></button>
-    </div>
-    <button id="start-game" onclick="startGameText()">Start Game!</button>
-
+    <audio id='myAudio'>
+      <source src="./audio/buttonClick.mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id='startAudio'>
+      <source src="/audio/startSound.wav">
+      Your browser does not support the audio element.
+    </audio>
   </body>
   <script src="./script.js"></script>
 </html>
