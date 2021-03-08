@@ -156,13 +156,14 @@ $buttonTextColor: #60DAFB;
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 375px) {
     #player {
-        margin-right: 10%;
+        margin-right: 80%;
     }
 
     #startingGameText {
         font-size: 2.3rem;
+        white-space: none;
         margin-top: -580px;
         margin-left: 25px;
     }
@@ -199,7 +200,92 @@ $buttonTextColor: #60DAFB;
     }
 }
 
+@media only screen and (min-width: 360px) {
+    #player {
+        margin-right: 55%;
+    }
 
+    #startingGameText {
+        font-size: 2.15rem;
+        margin-top: -480px;
+        margin-left: 20px;
+    }
+
+    #start-game {
+        margin-left: 85px;
+        margin-top: 0px;
+        font-size: 1.7rem;
+        padding: 20px;
+    }
+
+    #rock, #paper, #scissors {
+        padding: 15px;
+        margin: 12px;
+        margin-top: 0px;
+        font-size: 1.8rem;
+        width: 33%;
+        height: 7%;
+    } 
+
+    #random {
+        margin-top: 290px;
+        margin-left: 120px;
+        font-size: 1.8rem;
+        padding: 13px;
+        width: 34%;
+        height: 14%;
+    }
+
+    #textOnTop {
+        top: 190px;
+        left: 115px;
+        font-size: 2rem;
+    }
+}
+
+
+@media only screen and (min-width: 370px) {
+    #player {
+        margin-right: 55%;
+    }
+
+    #startingGameText {
+        font-size: 2.15rem;
+        margin-top: -480px;
+        margin-left: 20px;
+    }
+
+    #start-game {
+        margin-left: 95px;
+        margin-top: 0px;
+        font-size: 1.7rem;
+        padding: 20px;
+    }
+
+    #rock, #paper, #scissors {
+        padding: 15px;
+        margin: 12px;
+        margin-top: 0px;
+        font-size: 1.8rem;
+        width: 33%;
+        height: 7%;
+    } 
+
+    #random {
+        margin-top: 260px;
+        margin-left: 120px;
+        font-size: 1.8rem;
+        padding: 13px;
+        width: 34%;
+        height: 14%;
+    }
+
+    #textOnTop {
+        top: 180px;
+        left: 115px;
+        font-size: 2rem;
+    }
+}
 
 @media only screen and (min-width: 400px) {
     #player {
