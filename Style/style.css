@@ -1,0 +1,129 @@
+@import url("./responsive.css");
+html {
+  background-image: url("/img/background.jpg");
+  background-repeat: no-repeat;
+}
+
+body {
+  -webkit-animation: transitionIn 1s;
+          animation: transitionIn 1s;
+}
+
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 350px;
+  visibility: hidden;
+}
+
+#rock, #paper, #scissors {
+  padding: 15px;
+  margin: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background: #1F232A;
+  color: #60DAFB;
+  border: #ffffff;
+  border-radius: 3px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  width: 10%;
+  height: 5%;
+}
+
+#rock:hover, #paper:hover, #scissors:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #60DAFB;
+  color: #1F232A;
+}
+
+#random {
+  position: fixed;
+  margin-top: 210px;
+  margin-left: 575px;
+  font-size: 1.5rem;
+  padding: 13px;
+  visibility: hidden;
+  overflow: hidden;
+  pointer-events: none;
+  background: #1F232A;
+  color: #60DAFB;
+  border: #ffffff;
+  border-radius: 3px;
+  width: 10%;
+  height: 13%;
+}
+
+.scores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #1F232A;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+#player {
+  margin-right: 80%;
+}
+
+#start-game {
+  margin-left: 550px;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  padding: 13px;
+  cursor: pointer;
+  background: #1F232A;
+  color: #60DAFB;
+  border: #ffffff;
+  border-radius: 2px;
+  outline: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#start-game:hover {
+  background: #60DAFB;
+  color: #1F232A;
+}
+
+#startingGameText {
+  color: #1F232A;
+  font-size: 2.5rem;
+  margin-top: -550px;
+  margin-left: 465px;
+  font-family: 'Carter One', cursive;
+}
+
+#textOnTop {
+  position: fixed;
+  top: 115px;
+  left: 570px;
+  text-align: center;
+  font-size: 2rem;
+  opacity: 0.9;
+  font-family: 'Poppins', sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

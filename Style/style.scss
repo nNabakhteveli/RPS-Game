@@ -1,0 +1,112 @@
+@import url('./responsive.css');
+html {
+    background-image: url('/img/background.jpg');
+    background-repeat: no-repeat;
+}
+
+body {
+    animation: transitionIn 1s;
+}
+
+@keyframes transitionIn{
+    from{
+      opacity: 0;
+    }
+
+    to{
+      opacity: 1;
+    }
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 350px;
+    visibility: hidden;
+}
+
+$buttonBackgroundColor: #1F232A;
+$buttonTextColor: #60DAFB;
+
+#rock, #paper, #scissors {
+    padding: 15px;
+    margin: 10px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background: $buttonBackgroundColor;
+    color: $buttonTextColor;
+    border: #ffffff;
+    border-radius: 3px;
+    transition: 0.7s;
+    width: 10%;
+    height: 5%;
+    &:hover {
+        transition: 0.5s;
+        background: $buttonTextColor;
+        color: $buttonBackgroundColor; 
+    }
+} 
+
+#random {
+    position: fixed;
+    margin-top: 210px;
+    margin-left: 575px;
+    font-size: 1.5rem;
+    padding: 13px;
+    visibility: hidden;
+    overflow: hidden;
+    pointer-events: none;
+    background: $buttonBackgroundColor;
+    color: $buttonTextColor;
+    border: #ffffff;
+    border-radius: 3px;
+    width: 10%;
+    height: 13%;
+}
+
+.scores {
+    display: flex;
+    color: $buttonBackgroundColor;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#player {
+    margin-right: 80%;
+}
+
+#start-game {
+    margin-left: 550px;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    padding: 13px;
+    cursor: pointer;
+    background: $buttonBackgroundColor;
+    color: $buttonTextColor;
+    border: #ffffff;
+    border-radius: 2px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background: $buttonTextColor;
+        color: $buttonBackgroundColor;
+    }
+}
+
+
+#startingGameText {
+    color: $buttonBackgroundColor;
+    font-size: 2.5rem;
+    margin-top: -550px;
+    margin-left: 465px;
+    font-family: 'Carter One', cursive;
+}
+
+#textOnTop {
+    position: fixed;
+    top: 115px;
+    left: 570px;
+    text-align: center;
+    font-size: 2rem;
+    opacity: 0.9;
+    font-family: 'Poppins', sans-serif;
+}
