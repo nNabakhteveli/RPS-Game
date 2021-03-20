@@ -1,7 +1,6 @@
 @import url("./responsive.css");
 html {
   background-image: url("/img/background.jpg");
-  background-repeat: no-repeat;
 }
 
 body {
@@ -63,7 +62,7 @@ body {
 #random {
   position: fixed;
   margin-top: 210px;
-  margin-left: 575px;
+  margin-left: 595px;
   font-size: 1.5rem;
   padding: 13px;
   visibility: hidden;
@@ -113,7 +112,7 @@ body {
   color: #1F232A;
   font-size: 2.5rem;
   margin-top: -550px;
-  margin-left: 465px;
+  margin-left: 605px;
   font-family: 'Carter One', cursive;
 }
 

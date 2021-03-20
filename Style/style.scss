@@ -1,7 +1,8 @@
 @import url('./responsive.css');
+
 html {
     background-image: url('/img/background.jpg');
-    background-repeat: no-repeat;
+    // background-position:center top;
 }
 
 body {
@@ -50,7 +51,7 @@ $buttonTextColor: #60DAFB;
 #random {
     position: fixed;
     margin-top: 210px;
-    margin-left: 575px;
+    margin-left: 595px;
     font-size: 1.5rem;
     padding: 13px;
     visibility: hidden;
@@ -97,7 +98,7 @@ $buttonTextColor: #60DAFB;
     color: $buttonBackgroundColor;
     font-size: 2.5rem;
     margin-top: -550px;
-    margin-left: 465px;
+    margin-left: 605px;
     font-family: 'Carter One', cursive;
 }
 
