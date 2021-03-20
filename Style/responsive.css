@@ -1,23 +1,30 @@
-@media only screen and (max-width: 300px) {
-  #player {
-    margin-right: 42%;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+
+  #player {
+    margin-right: 37%;
+  }
+
   #startingGameText {
     font-size: 2.3rem;
     margin-top: -680px;
     margin-left: 25px;
   }
+
   #start-game {
     margin-left: 55px;
     position: relative;
     top: -80px;
     font-size: 1.7rem;
     padding: 20px;
-  }
-
-  @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
   }
 
   #rock {
@@ -64,9 +71,87 @@
     height: 12%;
     animation: fadeIn 2s;
   }
+
   #textOnTop {
     top: 180px;
     left: 70px;
+    font-size: 2.1rem;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  #player {
+    margin-right: 45%;
+  }
+
+  .scores{
+    font-size: 1.25rem;
+  }
+
+  #startingGameText {
+    font-size: 2.4rem;
+    margin-top: -680px;
+    margin-left: 15px;
+  }
+
+  #start-game {
+    margin-left: 90px;
+    position: relative;
+    top: -90px;
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  #rock {
+    margin-top: 30px;
+    position: relative;
+    left: 70px;
+    padding: 25px;
+    margin: 10px;
+    width: 50%;
+    height: 5%;
+    font-size: 2.2rem;
+    animation: fadeIn 2s;
+  }
+
+  #paper {
+    margin-top: 30px;
+    position: relative;
+    left: 100px;
+    padding: 25px;
+    margin: 10px;
+    width: 50%;
+    height: 5%;
+    font-size: 2.2rem;
+    animation: fadeIn 2s;
+  }
+
+  #scissors {
+    width: 44%;
+    margin-top: 160px;
+    position: relative;
+    left: -145px;
+    width: 45%;
+    height: 5%;
+    padding: 18px;
+    font-size: 2.2rem;
+    animation: fadeIn 2s;
+  }
+
+  #random {
+    margin-top: 300px;
+    margin-left: 105px;
+    font-size: 2.12rem;
+    padding: 13px;
+    width: 40%;
+    height: 12%;
+    animation: fadeIn 2s;
+  }
+
+  #textOnTop {
+    top: 200px;
+    left: 115px;
     font-size: 2.1rem;
   }
 }
@@ -376,9 +461,9 @@
     font-size: 2rem;
   }
 }
+*/
 
-
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 1366px) {
   #player {
     margin-right: 85%;
   }
@@ -413,5 +498,5 @@
     left: 570px;
     font-size: 2rem;
   }
-} */
+} 
 /*# sourceMappingURL=responsive.css.map */

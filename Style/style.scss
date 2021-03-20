@@ -2,7 +2,7 @@
 
 html {
     background-image: url('/img/background.jpg');
-    // background-position:center top;
+    background-repeat: no-repeat;
 }
 
 body {
@@ -69,6 +69,7 @@ $buttonTextColor: #60DAFB;
     display: flex;
     color: $buttonBackgroundColor;
     font-family: 'Noto Sans JP', sans-serif;
+    white-space: nowrap;
 }
 
 #player {

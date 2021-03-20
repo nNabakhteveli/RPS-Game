@@ -1,6 +1,7 @@
 @import url("./responsive.css");
 html {
   background-image: url("/img/background.jpg");
+  background-repeat: no-repeat;
 }
 
 body {
@@ -82,6 +83,7 @@ body {
   display: flex;
   color: #1F232A;
   font-family: 'Noto Sans JP', sans-serif;
+  white-space: nowrap;
 }
 
 #player {
