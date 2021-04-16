@@ -1,8 +1,10 @@
 @import url('./responsive.css');
 
 html {
-    background-image: url('/img/background.jpg');
+    background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
+    background-position: center;
+    height: 667px;
 }
 
 body {
@@ -26,21 +28,28 @@ body {
     visibility: hidden;
 }
 
-$buttonBackgroundColor: #1F232A;
-$buttonTextColor: #60DAFB;
+$buttonBackgroundColor: #302C2C;
+$buttonTextColor: #1B788C;
 
 #rock, #paper, #scissors {
+    background: $buttonBackgroundColor;
     padding: 15px;
     margin: 10px;
     font-size: 1.4rem;
-    cursor: pointer;
-    background: $buttonBackgroundColor;
+    font-family: 'Ranga', cursive;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 50px;
+    text-align: center;
     color: $buttonTextColor;
-    border: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
     transition: 0.7s;
     width: 10%;
     height: 5%;
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
     &:hover {
         transition: 0.5s;
         background: $buttonTextColor;
@@ -48,10 +57,11 @@ $buttonTextColor: #60DAFB;
     }
 } 
 
+
 #random {
     position: fixed;
-    margin-top: 210px;
-    margin-left: 595px;
+    margin-top: -130px;
+    margin-left: 575px;
     font-size: 1.5rem;
     padding: 13px;
     visibility: hidden;
@@ -63,17 +73,29 @@ $buttonTextColor: #60DAFB;
     border-radius: 3px;
     width: 10%;
     height: 13%;
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
 }
 
 .scores {
     display: flex;
-    color: $buttonBackgroundColor;
-    font-family: 'Noto Sans JP', sans-serif;
+    position: absolute;
+    width: 259px;
+    height: 53px;
+    left: 17px;
+    top: 24px;
+    font-family: 'Ranga', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 88px;
+    color: #155462;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     white-space: nowrap;
 }
 
 #player {
-    margin-right: 80%;
+    margin-right: 960px;
 }
 
 #start-game {
@@ -88,6 +110,8 @@ $buttonTextColor: #60DAFB;
     border-radius: 2px;
     outline: none;
     transition: 0.3s ease-in-out;
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
     &:hover {
         background: $buttonTextColor;
         color: $buttonBackgroundColor;
@@ -98,17 +122,17 @@ $buttonTextColor: #60DAFB;
 #startingGameText {
     color: $buttonBackgroundColor;
     font-size: 2.5rem;
-    margin-top: -550px;
-    margin-left: 605px;
+    margin-top: -450px;
+    margin-left: 480px;
     font-family: 'Carter One', cursive;
 }
 
 #textOnTop {
     position: fixed;
     top: 115px;
-    left: 570px;
+    left: 600px;
     text-align: center;
     font-size: 2rem;
     opacity: 0.9;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Ranga', cursive;
 }

@@ -119,23 +119,24 @@ paper.addEventListener('click', () => {
 
 // Options for scissors
 scissors.addEventListener('click', () => {
-    playAudio();
+    
     switch(changingValue()){
         case 0:
             textOnTop.innerHTML = textAfterMove[2];
             botPoint++;
             playerPoint = playerPoint;
             break;
-        case 1:
-            textOnTop.innerHTML = textAfterMove[0];
-            playerPoint++;
-            botPoint = botPoint;
-            break;
-        case 2:
+            case 1:
+                textOnTop.innerHTML = textAfterMove[0];
+                playerPoint++;
+                botPoint = botPoint;
+                break;
+                case 2:
             textOnTop.innerHTML = textAfterMove[1];
             break;
-    }
-    randomSign.style.visibility = 'visible';
+        }
+        randomSign.style.visibility = 'visible';
+        playAudio();
     minPointValues();
     renderPoints();
 });
