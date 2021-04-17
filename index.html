@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="shortcut icon" href="#"> <!-- To remove favicon error -->
-    <link rel="stylesheet" href="./Style/style.css">
+    <link rel="stylesheet" href="./Style/style.css?prt"> 
     <link rel="stylesheet" href="./Style/responsive.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -13,24 +13,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ranga&display=swap" rel="stylesheet"> 
-    <title>Rock-Paper-Scissors Game</title>
+    <title>Rock-Paper-Scissors Game</title> 
   </head>
   <body>
-    <button id='random'>Some value</button>
+    <div id="resultEnd" style="display: none;"> 
+      <h2 id="result"></h2>  
+      <hr>
+      <ul>
+         <li><a href="" id="twitter"><i class="fab fa-twitter twitter fa-2x" title="share on twiter"></i></a></li> 
+         <li><a href="https://github.com/nNabakhteveli/RPS-Game"><i class="fab fa-github github fa-2x" title="fork on github"></i></a></li>
+      </ul> 
+  </div>
+    <button id='random'>bot choice</button> 
     <div>
       <p id="textOnTop"></p>
     </div>
-
+    
     <div class="scores">
       <h2 id='player'>Player: </h2>
       <h2 id='bot'>Bot: </h2>
     </div>
 
     <div id='buttons'>
-      <button id="rock" onclick="changingValue()"><i class="far fa-hand-rock"><br>Rock</i></button>
-      <button id="paper" onclick="changingValue()"><i class="far fa-hand-paper"><br>Paper</i></button>
-      <button id="scissors" onclick="changingValue()"><i class="far fa-hand-scissors"><br>Scissors</i></button>
-    </div>
+      <button id="rock" onclick="Play('rock')" title="rock"><i class="far fa-hand-rock"><br>Rock</i></button>
+      <button id="paper" onclick="Play('paper')" title="paper"><i class="far fa-hand-paper"><br>Paper</i></button>
+      <button id="scissors" onclick="Play('scissors')" title="scissors"><i class="far fa-hand-scissors"><br>Scissors</i></button>
+    </div> 
     <button id="start-game" onclick="startGameText()">Start Game!</button>
 
     <audio id='myAudio'>
@@ -42,5 +50,5 @@
       Your browser does not support the audio element.
     </audio>
   </body>
-  <script src="./script.js"></script>
+  <script src="./script.js"></script>  
 </html>
